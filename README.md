@@ -39,3 +39,6 @@ Label data
 click here
 (hhttps://www.dropbox.com/s/oehg91f7k9zy4bj/labeled_1965_1969_1970_1974.csv.zip
 ?dl=0) to download label data
+
+Full solution code for eclipse with configurations:
+https://drive.google.com/open?id=1T6ttlJioo_LuqQG3jOY3X6QnfDbfma3Y
