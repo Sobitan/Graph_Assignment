@@ -178,9 +178,12 @@ object GraphPlot {
    	val accuracy = 100.0 * predictions.filter(x => x._1 == x._2).count() / (testDataRDD.count())
     
     
-    	println("Total Positive Prediction Correctly = " + predictions.filter(x => x._1 == x._2).count())
-    	println("Total test data = " + testDataRDD.count())
-    	println("Total train data = " + trainingDataRDD.count())
+    	val positively_Predicted = predictions.filter(x => x._1 == x._2).count()
+    	val total_test_dataset = testDataRDD.count()
+    	val total_training_dataset = trainingDataRDD.count()
+    	println("Total Positive Prediction Correctly = " + positively_Predicted)
+    	println("Total test data = " + total_test_dataset)
+    	println("Total train data = " + total_training_dataset)
     	println("Accuracy = " + accuracy)
     	//val lr = new LogisticRegression().setMaxIter(10).setRegParam(0.3).setElasticNetParam(0.8)
     	//val lrmodel = lr.fit(trainingDataRDD)
