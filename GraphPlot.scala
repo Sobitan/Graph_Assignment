@@ -87,6 +87,10 @@ object GraphPlot {
 		val graph=Graph(completeVertex,EdgesRDD).persist().cache();
           	val neigh =graph.collectNeighborIds(EdgeDirection.Either)
 		val broadcastVar = sc.broadcast(neigh.collect())
+		val graph_result = graph.edges.take(20)	    
+                val output3 = graph.vertices.take(20)
+                graph_result.foreach(println)
+		output3.foreach(println)
 
 		//Question 2
 		val RDDataLabel = sc.textFile("/home/deola/workspace/siteRequest/data/labeled_1965_1969_1970_1974.csv").cache();
